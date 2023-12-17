@@ -11,6 +11,7 @@ public class Application {
 
         Bag bag = new Bag(10000L, new Invitation());
         Audience audience = new Audience(bag);
+
         theater.enter(audience);
     }
 }

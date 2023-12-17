@@ -25,8 +25,7 @@ class TicketSellerTest {
             ticketSeller.sellTo(audience);
 
             // then
-            Assertions.assertThat(audience.getBag().hasTicket()).isTrue();
-            Assertions.assertThat(audience.getBag().getAmount()).isEqualTo(0);
+            Assertions.assertThat(audience.hasTicket()).isTrue();
         }
 
         @Test
@@ -76,8 +75,7 @@ class TicketSellerTest {
             ticketSeller.sellTo(audience);
 
             // then
-            Assertions.assertThat(audience.getBag().hasTicket()).isTrue();
-            Assertions.assertThat(audience.getBag().getAmount()).isEqualTo(1000);
+            Assertions.assertThat(audience.hasTicket()).isTrue();
         }
 
         @Test

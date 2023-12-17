@@ -16,7 +16,15 @@ public class TicketOffice {
     }
 
     public Ticket getTicket() {
+        if(hasNotTicket()) {
+            throw new IllegalArgumentException("[ERROR] 티켓이 모두 소진되어 더 이상 판매 할 수 없습니다.");
+        }
+
         return tickets.remove(0);
+    }
+
+    private boolean hasNotTicket() {
+        return tickets.size() <= 0;
     }
 
     public void minusAmount(Long amount) {

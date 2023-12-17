@@ -33,8 +33,20 @@ public class Bag {
         this.ticket = ticket;
     }
 
+    public Long getAmount() {
+        return amount;
+    }
+
     public void minusAmount(Long amount) {
+        if(isDontSell()) {
+            throw new IllegalArgumentException("[ERROR] 소지금이 부족해 티켓을 구매할 수 없습니다.");
+        }
+
         this.amount -= amount;
+    }
+
+    private boolean isDontSell() {
+        return this.amount <= 0;
     }
 
     public void plusAmount(Long amount) {

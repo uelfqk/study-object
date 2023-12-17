@@ -1,4 +1,4 @@
-package ticket;
+package chapter_01;
 
 public class TicketSeller {
 

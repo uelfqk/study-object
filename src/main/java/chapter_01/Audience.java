@@ -9,8 +9,6 @@ public class Audience {
     }
 
     public Long buy(Ticket ticket) {
-        System.out.println("--- 초대장 확인 중");
-
         if(bag.hasInvitation()) {
             bag.setTicket(ticket);
             System.out.println("--- 초대장 확인 완료 - 티켓 교환");
